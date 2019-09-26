@@ -5,7 +5,8 @@
  *@a:First integer
  *@b:Second integer
  * Description: Multiplies two integers
-*mul: calculate a * b
+*mul - calculate a * b
+*  Return: multiplies values
  */
 int mul(int a, int b)
 {
