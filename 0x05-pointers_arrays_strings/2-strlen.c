@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
- *_strlen - Returns Array length
- *Description: Returns length of an array
- *@s: array
- *@len: variable to iterate
+ * _strlen - Returns Array length
+ * Description: Returns length of an array
+  *@s: array
+  *Return - valu of array len
+ *len : ready
  */
 int _strlen(char *s)
 {
