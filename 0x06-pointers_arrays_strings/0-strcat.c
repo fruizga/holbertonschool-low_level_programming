@@ -16,12 +16,10 @@ while (dest[i]  != '\0')
 len1++;
 i++;
 }
-
 for (j = 0; j < len1; j++)
-	{
-		dest[len1 + j] = src[j];
+{
+dest[len1 + j] = src[j];
 }
 dest[len1 + j] = '\0';
-	return (dest);
-
+return (dest);
 }
