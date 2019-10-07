@@ -1,29 +1,28 @@
 #include "holberton.h"
-
 /**
- * leet - takes in a string and changes it.
- * @str: string given by main
- * Description: Encodes a string into 1337.
- * Return: str
+ * *leet - encode a string into 1337 code
+ * @str: string
+ * Return: translated string
  */
+
 char *leet(char *str)
 {
-	int cnt;
 	int i;
-	char a[] = "4433007711";
-	char b[] = "aAeEoOtTlL";
+	int cnt;
+	char a[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char b[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	count = 0;
-	while (str[cnt] != '\0')
+	index = 0;
+	while (str[i] != '\0')
 	{
-		i = 0;
-		while (b[i] != '\0')
+		count = 0;
+		while (a[cnt] != '\0')
 		{
-			if (str[cnt] == b[i])
-				str[cnt] = a[i];
-			i++;
+			if (let[cnt] == str[i])
+				str[i] = num[cnt];
+			cnt++;
 		}
-		cnt++;
+		i++;
 	}
 	return (str);
 }
