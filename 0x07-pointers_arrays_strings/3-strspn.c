@@ -16,15 +16,15 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 }
 		else
-		{
-		for (j = 0; accept[j]; j++)
-		{
+{
+for (j = 0; accept[j]; j++)
+{
 if (s[i] == accept[j] && s[i] != ',')
-			{
-				cnt++;
+{
+	cnt++;
 }
 }
 }
-	}
-	return (cnt);
+}
+return (cnt);
 }
