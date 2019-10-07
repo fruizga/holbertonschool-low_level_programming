@@ -15,11 +15,11 @@ char *leet(char *str)
 	index = 0;
 	while (str[i] != '\0')
 	{
-		count = 0;
+		cnt = 0;
 		while (a[cnt] != '\0')
 		{
 			if (let[cnt] == str[i])
-				str[i] = num[cnt];
+				str[i] = b[cnt];
 			cnt++;
 		}
 		i++;
