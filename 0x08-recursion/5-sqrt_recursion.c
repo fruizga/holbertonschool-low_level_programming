@@ -3,17 +3,17 @@
  *_sqrt_recursion - calculate square root
  *@n: number as parameter
  *Return: something
- *
+ *_parte_dos - for recursion
+ *@i: fir iterarte 
  */
 int _parte_dos(int n, int i)
 {
 if (i * i > n)
-	return (-1);
+return (-1);
 if (i * i == n)
-	return (i);
-	return (_parte_dos(n, i + 1));
+return (i);
+return (_parte_dos(n, i + 1));
 }
-
 
 int _sqrt_recursion(int n);
 {
