@@ -4,6 +4,7 @@
 * main - Prints all arguments received
 *@argv: array of arguments
 *@argc: arg count
+*Return: 0 if all is ok
 */
 int main(int argc, char *argv[])
 {
