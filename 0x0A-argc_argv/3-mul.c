@@ -4,6 +4,7 @@
 * main - Multiply two arguments
 *@argv: array of arguments
 *@argc: arg count
+<<<<<<< HEAD
 *Return: 0
 */
 int main(int argc, char *argv[])
