@@ -17,11 +17,11 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 
-	while (s2[j] != '\n')
+	while (s2[j] != '\0')
 	{
 		j++;
 }
-	sum = i + j + 1;
+	sum = i + j;
 	pt = malloc(sizeof(char) * sum);
 
 	len1 = i + j;
