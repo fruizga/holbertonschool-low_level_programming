@@ -5,6 +5,7 @@
  *@array:array
  *@size:length
  *@cmp: function pointer
+ *Return: index if all it's right or -1 if it isn't
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
