@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "function_pointers.h"
 /**
- *
- *
- *
- *
+ *main - entry point
+ *@argc: number of arguments
+ *@argv: array of arguments
+ *Return: cero
  */
 int main(int argc, char *argv[])
 {
@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	if (argc !=  4)
 	{
-		printf("Error\n" );
+		printf("Error\n");
 		exit(98);
 	}
 
