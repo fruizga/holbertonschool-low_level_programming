@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "function_pointers.h"
+#include <stdlib.h>
 /**
  *main - entry point
  *@argc: number of arguments
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
 
 	z = p(x, y);
 
-	print("%i\n", z);
+	printf("%i\n", z);
 
 	return (0);
 

@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "function_pointers.h"
+#include <stdlib.h>
+#include "3-calc.h"
 /**
  *op_add - sum of two integers
  *@a: first number

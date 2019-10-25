@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "function_pointers.h"
+#include "3-calc.h"
+#include <string.h>
 /**
 *get_op_func - pointer to get the character of operation
 *@s: string of operators
@@ -19,11 +21,11 @@ int i = 0;
 
 while (ops[i].op)
 {
-	if (ops[i].op == s)
+	if (strcmp(ops[i].op, s) == 0)
 	{
 		return (ops[i].f);
 	}
-			i++;
+		i++;
 }
 	return (NULL);
 }
