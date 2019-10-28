@@ -9,9 +9,9 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-       unsigned int i;
-	va_list valist;
-	char *string;
+unsigned int i;
+va_list valist;
+char *string;
 
 	va_start(valist, n);
 
