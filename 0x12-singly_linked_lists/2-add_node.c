@@ -10,23 +10,22 @@
  * @head: Address of the new elements
  *@str: value to store in the new node
  * Description: prints elements of a list
- * Return: Addressof new nodes.
+ * Return: Address of new nodes.
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *newNode;
+	int i = 0;
+	list_t *aux;
 
-	if (head == NULL)
+	aux = malloc(sizeof(list_t));
+	if (aux == NULL)
 		return (NULL);
-	newNode = malloc(sizeof(list_t));
-	if (newNode == NULL)
-		return (NULL);
-	if (*head == NULL)
-		newNode->next = NULL;
-	else
-		newNode->next = *head;
-	newNode->str = strdup(str);
-	newNode->len = strlen(str);
-	*head = newNode;
-	return (*head);
+	while (str[i])
+		i++;
+
+	(*aux).str = strdup(str);
+	(*aux).len = i;
+	(*aux).next = *head;
+	*head = aux;
+	return (aux);
 }
