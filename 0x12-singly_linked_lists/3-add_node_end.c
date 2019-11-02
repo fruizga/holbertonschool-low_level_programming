@@ -6,7 +6,7 @@
 #include <string.h>
 
 /**
- * add_node - add new node at the beginning
+ * add_node_end - add new node at the end
  * @head: Address of the new elements
  *@str: value to store in the new node
  * Description: prints elements of a list
@@ -17,6 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *newNode;
 	list_t *aux = *head;
 	int i = 0;
+
 	newNode = malloc(sizeof(list_t));
 	if (newNode == NULL)
 	{
@@ -24,7 +25,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	while (str[i] != '\0')
 	{
-		i**;
+		i++;
 	}
 	newNode->len = i;
 	newNode->str = strdup(str);
@@ -36,7 +37,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		while (aux->next != NULL)
-		{aux = aux->next;}
+		{aux = aux->next; }
 		aux->next = newNode;
 
 	}
