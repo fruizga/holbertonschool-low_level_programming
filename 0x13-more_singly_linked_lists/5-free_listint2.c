@@ -19,7 +19,7 @@ void free_listint2(listint_t **head)
 		{
 
 
-			*aux = (*aux)->next;
+			aux = aux->next;
 			free(aux);
 			*head = aux;
 
