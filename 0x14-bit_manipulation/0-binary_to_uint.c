@@ -1,27 +1,40 @@
 #include "holberton.h"
-#include <math.h>
+#include <stdio.h>
 /**
- *binary_to_uint - conver binary string to unsigned int
- *@b:string of binary number
- *Return:number as unsigned int
- */
+ * binary_to_uint - Converts a string binary in unsigned int
+ * @b: string to convert
+ * Return: NSIGNED INT NUMBER
+ *
+*/
 unsigned int binary_to_uint(const char *b)
 {
-	int res = 0, i = 0, j = 0;
+	int size = 0, mul = 1, i;
+	unsigned int num = 0;
 
-	while (b[i] != '\0')
+	if (b != NULL)
 	{
-		i++;
-	}
-
-	while (b[j] != '\0')
-	{
-		if (b[j] == '1')
+		while (b[size] != '\0')
+			size++;
+		if (size >= 1)
 		{
-			res = res + pow(2, i - 1);
+			for (i = size - 1; i >= 0; i--)
+			{
+				if ((b[i] >= 65 && b[i] <= 90) || (b[i] >= 97 && b[i] <= 122))
+				{
+					return (0);
+				}
+				if (b[i] == '1')
+				{
+					num += mul;
+				}
+				mul *= 2;
+			}
+			return (num);
 		}
-		i--;
-		j++;
+		else
+		{
+			return (0);
+		}
 	}
-	return (res);
+	return (0);
 }
