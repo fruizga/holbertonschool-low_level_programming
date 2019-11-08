@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <math.h>
 /**
  *binary_to_uint - conver binary string to unsigned int
  *@b:string of binary number
@@ -6,19 +7,21 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int res = 0, base2 = 1, i = 0;
+	int res = 0, i = 0, j = 0;
 
-	while (b[i] != '\0' && i < 32)
+	while (b[i] != '\0')
 	{
-		if (b[i] == '1')
-		{
-			res = res + base2;
-		}
-		else{
-			
-		}
-		base2 = base2 * 2;
 		i++;
+	}
+
+	while (b[j] != '\0')
+	{
+		if (b[j] == '1')
+		{
+			res = res + pow(2, i - 1);
+		}
+		i--;
+		j++;
 	}
 	return (res);
 }
