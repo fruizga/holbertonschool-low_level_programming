@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
  * flip_bits - returns the number of bits you would need to flip to get from one 
- * @n:long int
- * @m:long int
- * Return:1 if everything is ok.
+ * @n:first number
+ * @m: next number
+ * Return: the counter
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
