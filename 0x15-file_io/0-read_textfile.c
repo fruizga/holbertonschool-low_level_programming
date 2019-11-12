@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (-1);
 	}
 
-	lector =read(fd, buff_de_mier, letters);
+	lector = read(fd, buff_de_mier, letters);
 	if (fd == -1)
 	{
 		free(buff_de_mier);
@@ -41,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff_de_mier);
 		return (-1);
 	}
-	close(fd);	
+	close(fd);
 
 	return (imprimidor);
 
