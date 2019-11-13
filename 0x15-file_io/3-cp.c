@@ -14,7 +14,7 @@ main(int argc, char *argv[])
     ssize_t numRead;
     char buff[BUF_SIZE];
 
-    if (argc != 3 || strcmp(argv[1], "--help") == 0)
+    if (argc != 3 )
     {
         dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
         exit (97);
