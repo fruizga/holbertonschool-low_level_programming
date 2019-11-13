@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * create_file - Create file
+ * append_text_to_file - append text to a file
  * @filename: Pointer to filename
  * @text_content: content
  * Return: 1 if it works
  *
 */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, cnt = 0, writer = 0;
 	
@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	fd = open(filename, O_RDWR | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_APPEND | O_WRONLY);
 	if (fd == -1)
 		return (-1);
 	if (text_content != NULL)
@@ -28,4 +28,3 @@ int create_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
-
