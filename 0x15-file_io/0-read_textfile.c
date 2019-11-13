@@ -11,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd, lector, imprimidor;
 	char *buff_de_mier;
 
-	buff_de_mier = malloc(letters);
+	buff_de_mier = malloc(sizeof(char) * letters);
 	if (buff_de_mier == NULL)
 	{
 		return (0);
@@ -26,20 +26,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 	{
 		free(buff_de_mier);
-		return (-1);
+		return (0);
 	}
 
 	lector = read(fd, buff_de_mier, letters);
-	if (fd == -1)
+	if (lector == -1)
 	{
 		free(buff_de_mier);
-		return (-1);
+		return (0);
 	}
 	imprimidor = write(STDOUT_FILENO, buff_de_mier, lector);
-	if (fd == -1)
+	if (imprimidor == -1)
 	{
 		free(buff_de_mier);
-		return (-1);
+		return (0);
 	}
 	close(fd);
 
