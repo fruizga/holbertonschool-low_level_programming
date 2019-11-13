@@ -35,10 +35,12 @@ main(int argc, char *argv[])
         exit (99);
     }
     while ((numRead = read(inputFd, buff, BUF_SIZE)) > 0)
-    if (write(outputFd, buff, numRead) != numRead)
     {
-        dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
-        exit (99);
+        if (write(outputFd, buff, numRead) != numRead)
+        {
+            dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+            exit (99);
+        }
     }
     if (numRead == -1)
     
