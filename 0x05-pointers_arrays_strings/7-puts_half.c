@@ -17,7 +17,7 @@ void puts_half(char *str)
 	if (cnt % 2 != 0)
 		cnt = (cnt - 1) / 2;
 	else
-		cnt =  / 2;
+		cnt = cnt / 2;
 	str = str - cnt;
 	while (*str != '\0')
 	{
