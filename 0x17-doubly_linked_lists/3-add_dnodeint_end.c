@@ -1,11 +1,11 @@
 #include "lists.h"
 /**
- *add_dnodeint - double pointer to head of list
- * @head:counter
- *@n: value to stare in node
- *Return: new node
+ *add_dnodeint_end - add node at the end of list
+ * @head: double pointer to head of list
+ * @n: value to store
+ * Return: new node
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *newNode, *aux;
 
@@ -26,10 +26,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	else
 	{
 		aux = *head;
+		while (aux->next != NULL)
+		{aux = aux->next; }
 		newNode->n = n;
-		newNode->next = aux;
-		newNode->prev = NULL;
-		*head = newNode;
+		aux->next = newNode;
+		newNode->prev = aux;
+		newNode->next = NULL;
 
 	}
 	return (newNode);
