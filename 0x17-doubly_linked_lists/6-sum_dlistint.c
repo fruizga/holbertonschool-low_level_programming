@@ -9,6 +9,7 @@ int sum_dlistint(dlistint_t *head)
 	dlistint_t *aux;
 	int suma = 0;
 
+	aux = head;
 	if (aux == NULL)
 	{
 		return (0);
@@ -20,6 +21,7 @@ int sum_dlistint(dlistint_t *head)
 			suma = suma + aux->n;
 			aux = aux->next;
 		}
-		return (suma);
+
 	}
+		return (suma);
 }
